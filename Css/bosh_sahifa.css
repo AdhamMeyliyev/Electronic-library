@@ -1,0 +1,222 @@
+/* Montserrat Alternates shirft turi */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #cbd5f5;
+}
+/* NAVBAR */
+.bg-gradient {
+	background-color: #0f172a;
+	/* background-color: linear-gradient(90deg, #4F46E5, #9333EA); */
+}
+
+/* HERO */
+.hero {
+	margin-top: 55px;
+	padding: 120px 0 80px;
+	height: 600px;
+	background: linear-gradient(135deg, #4f46e5, #9333ea);
+	background-image: url('/imags/hero_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 600px;
+	color: #0f172a;
+}
+
+.hero h1 {
+	background-color: rgba(255, 255, 255, 0.4);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	padding: 10px;
+	color: #0f172a;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.hero p {
+	background-color: rgba(255, 255, 255, 0.4);
+	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(1px);
+	border-radius: 10px;
+	padding: 10px;
+	color: #0f172a;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+/* SECTION TITLE */
+.section-title {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* BOOK CARD */
+.book-card {
+	background: #fff;
+	padding: 20px;
+	border-radius: 16px;
+	text-align: center;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.book-card:hover {
+	transform: translateY(-10px);
+}
+.book-card-modern {
+	position: relative;
+	padding: 25px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+	transition: all 0.4s ease;
+	height: 100%;
+}
+
+.book-card-modern:hover {
+	transform: translateY(-12px) scale(1.02);
+	box-shadow: 0 30px 60px rgba(79, 70, 229, 0.35);
+}
+
+.book-card-modern h5 {
+	font-weight: 700;
+	margin-top: 30px;
+}
+
+.book-card-modern p {
+	color: #555;
+	margin-bottom: 25px;
+}
+
+/* Badge */
+.book-badge {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background: linear-gradient(135deg, #4f46e5, #9333ea);
+	color: #fff;
+	padding: 5px 14px;
+	border-radius: 30px;
+	font-size: 12px;
+}
+
+/* Actions */
+.card-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.card-actions .btn-light {
+	border: 1px solid #ddd;
+}
+
+/* Jahon rang */
+.book-card-modern.world .book-badge {
+	background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Info section style */
+.info-section {
+	padding: 80px 0;
+	background: linear-gradient(135deg, #4f46e5, #9333ea);
+	color: #fff;
+}
+
+.info-box {
+	background: rgba(255, 255, 255, 0.15);
+	padding: 30px;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+.info-box:hover {
+	transform: translateY(-8px);
+	background: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer style */
+.footer {
+	background: #0f172a;
+	color: #cbd5f5;
+	padding: 60px 0 20px;
+}
+
+.footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer li {
+	margin-bottom: 8px;
+}
+
+/* About style */
+.about-section {
+	padding: 100px 0;
+}
+
+.about-card {
+	padding: 40px;
+	border-radius: 24px;
+	background: linear-gradient(135deg, #4f46e5, #9333ea);
+	color: #fff;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* News style */
+.news-section {
+	padding: 100px 0;
+	background: #f9fafb;
+}
+
+.news-card {
+	background: #fff;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.news-card:hover {
+	transform: translateY(-10px);
+}
+
+.news-date {
+	font-size: 13px;
+	color: #6366f1;
+}
+
+/* Afzalliklar style */
+.features-section {
+	padding: 100px 0;
+}
+
+.feature-box {
+	padding: 35px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.feature-box:hover {
+	transform: translateY(-8px);
+}
+
+/* RWD */
+@media (max-width: 768px) {
+	.hero {
+		padding-top: 60px;
+		background: linear-gradient(135deg, #4f46e5, #9333ea);
+		height: auto;
+	}
+	.hero h1 {
+		font-size: 1.8rem;
+	}
+}

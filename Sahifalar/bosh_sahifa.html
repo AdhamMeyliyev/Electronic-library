@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Raqamli Kutubxona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../Css/bosh_sahifa.css">
+</head>
+<body>
+
+<!-- 🔐 AUTH CHECK -->
+<script>
+  if(localStorage.getItem("isLoggedIn") !== "true"){
+    window.location.href = "login.html";
+  }
+</script>
+
+<!-- 🔹 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient fixed-top shadow ">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="./bosh_sahifa.html">
+      📚 Digital Library
+    </a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kategoriyalar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kitoblar</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light ms-lg-3" onclick="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔹 HERO -->
+<section class="hero text-center text-white">
+  <div class="container">
+    <h1 data-aos="fade-down">Yoshlar uchun Raqamli Kutubxona</h1>
+    <h1 data-aos="fade-down">🚀 Raqamli bilimlar — zamonaviy kelajak asosi</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Bugungi dunyoda bilim tez yangilanadi. Bizning elektron kutubxonamiz sizga eng so‘nggi ta’lim resurslari, dasturlash tillari va texnologiyalarni qulay, tezkor va zamonaviy shaklda taqdim etadi. Internet bo‘lsa ham, bo‘lmasa ham, bilim doimo yoningizda.
+    </p>
+		<p data-aos="fade-up" data-aos-delay="200">
+			📖 O‘qing. Amalda qo‘llang. Yuksaling.
+		</p>
+  </div>
+</section>
+<section class="about-section" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-md-6">
+        <h2>📚 Raqamli kutubxona haqida</h2>
+        <p>
+          Ushbu elektron kutubxona yoshlarning kitobxonlik madaniyatini 
+          rivojlantirish maqsadida yaratilgan. Platforma orqali foydalanuvchilar 
+          o‘zbek va jahon adabiyotlarining eng sara asarlarini qulay va tezkor 
+          tarzda o‘qish imkoniyatiga ega bo‘ladilar.
+        </p>
+        <p>
+          Sayt mobil qurilmalarga moslashtirilgan bo‘lib, keyinchalik APK ilova 
+          sifatida foydalanish imkonini beradi.
+        </p>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="about-card">
+          <h3>🎯 Maqsadimiz</h3>
+          <p>Yoshlar orasida mutolaa madaniyatini oshirish</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-down">📰 Yangiliklar</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="news-card">
+          <span class="news-date">12 Fevral 2025</span>
+          <h5>Yangi kitoblar yuklandi</h5>
+          <p>O‘zbek va jahon adabiyotidan 50+ yangi kitoblar qo‘shildi.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="news-card">
+          <span class="news-date">20 Fevral 2025</span>
+          <h5>O‘qish marafoni</h5>
+          <p>Eng faol kitobxonlar uchun maxsus tanlov e’lon qilindi.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="news-card">
+          <span class="news-date">01 Mart 2025</span>
+          <h5>Mobil ilova</h5>
+          <p>Elektron kutubxonaning APK versiyasi tez orada taqdim etiladi.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">⭐ Nega aynan biz?</h2>
+
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="feature-box">
+          📱
+          <h5>Mobil moslashuv</h5>
+          <p>Sayt barcha qurilmalarda qulay ishlaydi</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-box">
+          📚
+          <h5>Keng kutubxona</h5>
+          <p>Yuzlab elektron kitoblar</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-box">
+          🚀
+          <h5>Tezkor va qulay</h5>
+          <p>Zamonaviy UI/UX dizayn</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- 🔹 BOOK SECTIONS -->
+<div class="container my-5 pt-5">
+
+  <!-- 📘 O'zbek adabiyoti -->
+  <!-- <h3 class="section-title" data-aos="fade-right">📘 O‘zbek adabiyoti</h3> -->
+  <!-- <div class="row g-4">
+
+    <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="book-card-modern">
+        <div class="book-badge">O‘zbek</div>
+        <h5>O‘tkan kunlar</h5>
+        <p>Abdulla Qodiriy</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="book-card-modern">
+        <div class="book-badge">O‘zbek</div>
+        <h5>O‘tkan kunlar</h5>
+        <p>Abdulla Qodiriy</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="book-card-modern">
+        <div class="book-badge">O‘zbek</div>
+        <h5>O‘tkan kunlar</h5>
+        <p>Abdulla Qodiriy</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="book-card-modern">
+        <div class="book-badge">O‘zbek</div>
+        <h5>O‘tkan kunlar</h5>
+        <p>Abdulla Qodiriy</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="book-card-modern">
+        <div class="book-badge">O‘zbek</div>
+        <h5>Mehrobdan chayon</h5>
+        <p>Abdulla Qodiriy</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+
+  <!-- 🌍 Jahon adabiyoti -->
+  <!-- <h3 class="section-title mt-5" data-aos="fade-right">🌍 Jahon adabiyoti</h3> -->
+  <!-- <div class="row g-4">
+
+    <div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>1984</h5>
+        <p>George Orwell</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>1984</h5>
+        <p>George Orwell</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>1984</h5>
+        <p>George Orwell</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>1984</h5>
+        <p>George Orwell</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+		<div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>1984</h5>
+        <p>George Orwell</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="book-card-modern world">
+        <div class="book-badge">Jahon</div>
+        <h5>Alkimyogar</h5>
+        <p>Paulo Coelho</p>
+
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm">👁 Ko‘rish</button>
+          <button class="btn btn-primary btn-sm">📖 O‘qish</button>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+
+</div>
+
+ <section class="info-section" data-aos="fade-up">
+  <div class="container">
+    <div class="row text-center g-4">
+
+      <div class="col-md-4">
+        <div class="info-box">
+          📖
+          <h5>1000+ Kitob</h5>
+          <p>O‘zbek va jahon adabiyotlaridan</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-box">
+          🎓
+          <h5>Bilimni oshiring</h5>
+          <p>Har kuni yangi bilimlar</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-box">
+          📱
+          <h5>Mobil ilova</h5>
+          <p>APK formatda foydalanish</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <a class="navbar-brand fw-bold" href="./bosh_sahifa.html">📚 Digital Library</a>
+        <p>Yoshlar uchun zamonaviy raqamli kutubxona</p>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Bo‘limlar</h6>
+        <ul>
+          <li><a href="#">O‘zbek adabiyoti</a></li>
+          <li><a href="#">Jahon adabiyoti</a></li>
+          <li><a href="#">Zamonaviy kitoblar</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Aloqa</h6>
+        <a href="mailto:xamrayeva631@gmail.com">Email: xamrayeva631@gmail.com</a>
+        <br>
+        <a href="tel:998900000000">Tel: +998 90 000 00 00</a>
+      </div>
+
+    </div>
+    <hr>
+    <p class="text-center mb-0">© 2025 Digital Library</p>
+  </div>
+</footer>
+
+
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 800 });
+
+  function logout(){
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
