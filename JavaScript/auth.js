@@ -33,7 +33,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e){
   if(email === savedUser.email && password === savedUser.password){
     localStorage.setItem("isLoggedIn", "true");
     alert("Kirish muvaffaqiyatli!");
-    window.location.href = "bosh_sahifa.html";
+    window.location.href = "index.html";
   } else {
     alert("Email yoki parol noto‘g‘ri!");
   }
