@@ -6,7 +6,11 @@ body {
 	overflow-x: hidden;
 }
 
-a{
+html {
+	overflow-x: hidden;
+}
+
+a {
 	text-decoration: none;
 	color: #cbd5f5;
 }

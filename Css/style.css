@@ -5,6 +5,9 @@ body {
 	font-family: 'Montserrat Alternates', sans-serif;
 	overflow-x: hidden;
 }
+html {
+	overflow-x: hidden;
+}
 .auth-body {
 	background: linear-gradient(135deg, #4f46e5, #9333ea);
 	font-family: 'Segoe UI', sans-serif;
